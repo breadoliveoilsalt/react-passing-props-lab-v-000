@@ -20,9 +20,8 @@ import FilteredFruitList from './FilteredFruitList.js';
 const FruitBasket = (props) => {
     return (
       <div className="fruit-basket">
-        <Filter handleChange={props.handleFilterChange} />
-        <FilteredFruitList
-          filter={props.selectedFilter} />
+        <Filter filters={props.filters} handleChange={props.updateFilterCallback} />
+
       </div>
     );
 }
@@ -30,7 +29,7 @@ const FruitBasket = (props) => {
 FruitBasket.defaultProps = {
   fruit: [],
   filters: [],
-  currentFilter: null, 
+  currentFilter: null,
   updateFilterCallback: null
 }
 

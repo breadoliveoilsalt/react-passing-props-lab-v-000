@@ -17,7 +17,7 @@ class App extends React.Component {
 
   handleFilterChange = event => {
     console.log('new filter: ', event.target.value);
-    this.setState({ selectedFilter: event.target.value });
+    this.setState({ currentFilter: event.target.value });
   }
 
 
