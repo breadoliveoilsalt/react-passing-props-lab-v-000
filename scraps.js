@@ -17,3 +17,24 @@ const FruitBasket = (props) => {
       </div>
     );
 }
+
+
+
+
+const FilteredFruitList = (props) => {
+    const list = !props.filter || props.filter === 'all' ? props.items : props.items.filter(i => i.fruit_type === props.filter);
+
+    return (
+      <ul className="fruit-list">
+
+      </ul>
+    );
+  }
+
+
+  return (
+    <div>
+    "FilteredFruitList yo!"
+
+
+    </div>)
